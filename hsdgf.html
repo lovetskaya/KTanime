@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML-баннер</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+
+     
+        @keyframes backgroundColorAnimation {
+                from {
+                    background-color: rgb(0, 68, 255);
+                }
+                to {
+                    background-color: rgb(218, 209, 52);
+                }
+            }
+            div{
+                width: 100px;
+                height: 100px;
+                margin: 40px 30px;
+                border: 1px solid #333;
+                 
+                background-color: rgb(186, 113, 139);
+                animation-name: backgroundColorAnimation;
+                animation-duration: 6s;
+            }
+    @keyframes text1
+    {
+        10%{opacity: 1;}
+        40%{opacity: 0;}
+    }  
+    @keyframes text2
+    {
+        30%{opacity: 0;}
+        60%{opacity:1;}
+    }
+    @keyframes banner
+    {
+        10%{background-color: #74d8cd;}
+        40%{background-color: #74a3d1;}
+        80%{background-color: rgb(100, 198, 100);}
+    }
+    .banner
+    {
+        width: 600px;
+        height: 120px;
+        background-color: rgb(135, 211, 100);
+        margin: 0 auto;
+        position: relative;
+    }
+    .text1,.text2
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        line-height: 120px;
+        text-align: center;
+        font-size: 40px;
+        color: #fff;
+        opacity: 0;
+    }
+ 
+    .text1
+    {
+        animation : text1 6s infinite;
+    }
+ 
+    .text2
+    {
+        animation : text2 3s infinite;
+    }
+ 
+    .animated
+    {
+        opacity: 0.8;
+        position: absolute;
+        width: 100%;
+        height: 100%;  
+        background-color: #c777a7;
+        animation: banner 4s infinite;
+    }
+    .translated1{
+        transition: transform 3s ease;
+                background-color:rgb(16, 16, 16);
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                margin-left: 100px;
+                margin-top:300px;
+                text-align: center;
+            }
+.translated{
+                transition: transform 3s ease;
+                background-color:rgb(236, 235, 242);
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                margin-left: 600px;
+                margin-top:500px;
+    text-align: center;
+
+            }
+            .translated:hover{
+                transform: translate(-50%,-50%) scale(3.5)
+            }    
+            .translated1:hover{
+                transform: translate(-50%,-50%) scale(3.5)
+            }       
+
+    </style>
+</head>
+<body>
+        <div class="animated">
+            <div class="text1">Полина лучшая</div>
+            <div class="text2"></div>
+            <div class="text2">За деньги да</div>
+        </div>
+    </div>
+    <div class="translated"> <div class="text2">Пельмени</div></div>
+    <div class="translated1"><div class="text2">Пицца</div></div>
+</body>
+</html>
